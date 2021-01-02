@@ -24,13 +24,15 @@ export function createAwesomePlugin(options?: AwesomeOptions): AwesomePlugin {
     options,
     install(app: App) {
       app.component('awesome-input', AwesomeInput);
-      app.provide(AwesomePluginSymbol, this);
 
       if (isVue2) {
         // Vue 2 only
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (app as any).prototype.$awesomePlugin = this;
         console.log('IS VUEEEE 222');
       } else {
         // Vue 3 only
+        app.provide(AwesomePluginSymbol, this);
         console.log('IS VUEEEE 333');
       }
     },

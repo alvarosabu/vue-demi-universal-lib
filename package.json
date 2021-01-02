@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "rollup -c rollup.config.js",
     "build:dts": "api-extractor run --local --verbose && tail -n +7 >> dist/vue-universal-lib.d.ts",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "semantic-release": "semantic-release"
   },
   "main": "dist/vue-universal-lib.cjs.js",
   "browser": "dist/vue-universal-lib.esm.js",
@@ -45,6 +46,7 @@
     "rollup-plugin-typescript2": "^0.29.0",
     "rollup-plugin-vue": "^6.0.0-beta.11",
     "typescript": "~4.1.3",
-    "vue": "3.0.4"
+    "vue": "3.0.4",
+    "semantic-release": "17.2.4"
   }
 }

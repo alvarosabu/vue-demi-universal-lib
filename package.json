@@ -1,7 +1,6 @@
 {
   "name": "vue-demi-universal-lib",
   "version": "0.0.0-development",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "rollup -c rollup.config.js",

@@ -1,14 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <awesome-input />
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <awesome-input />
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script>
 
-export default defineComponent({
+export default {
   name: 'App',
-});
+};
 </script>
 
 <style>

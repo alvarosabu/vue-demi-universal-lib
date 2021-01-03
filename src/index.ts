@@ -1,5 +1,5 @@
 import { App, inject, InjectionKey, isVue2 } from 'vue-demi';
-import AwesomeInput from './components/AwesomeInput.vue';
+import AwesomeInput from './components/AwesomeInput';
 
 export interface AwesomeOptions {
   option1: boolean;

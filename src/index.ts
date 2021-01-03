@@ -1,5 +1,6 @@
 import { App, inject, InjectionKey, isVue2 } from 'vue-demi';
-import AwesomeInput from './components/AwesomeInput';
+import { AwesomeInput } from './components/AwesomeInput';
+import { Awesome } from './components/Awesome';
 
 export interface AwesomeOptions {
   option1: boolean;
@@ -24,6 +25,7 @@ export function createAwesomePlugin(options?: AwesomeOptions): AwesomePlugin {
     options,
     install(app: App) {
       app.component('awesome-input', AwesomeInput);
+      app.component('awesome', Awesome);
 
       if (isVue2) {
         // Vue 2 only

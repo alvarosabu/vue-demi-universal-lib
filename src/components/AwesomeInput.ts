@@ -1,6 +1,6 @@
 import { ref, defineComponent, h } from 'vue-demi';
 
-const AwesomeInput = defineComponent({
+export const AwesomeInput = defineComponent({
   name: 'AwesomeInput',
   setup(_props, ctx) {
     const awiwi = ref('Awesome');
@@ -10,13 +10,16 @@ const AwesomeInput = defineComponent({
         {
           class: 'awesome-input',
         },
-        h('input', {
-          name: 'awesome-input',
-          modelValue: awiwi.value,
-          'onUpdate:modelValue': value => ctx.emit('update:modelValue', value),
-        }),
+        [
+          h('input', {
+            name: 'awesome-input',
+            id: 'awesome-input',
+            value: awiwi.value,
+            modelValue: awiwi.value,
+            'onUpdate:modelValue': value =>
+              ctx.emit('update:modelValue', value),
+          }),
+        ],
       );
   },
 });
-
-export default AwesomeInput;

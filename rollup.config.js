@@ -8,7 +8,6 @@ import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import pascalcase from 'pascalcase';
-import vue from 'rollup-plugin-vue';
 
 const pkg = require('./package.json');
 const name = pkg.name;
@@ -127,7 +126,6 @@ function createConfig(format, output, plugins = []) {
     external,
     plugins: [
       tsPlugin,
-      vue(),
       createReplacePlugin(
         isProductionBuild,
         isBundlerESMBuild,

@@ -54,6 +54,10 @@ const outputConfigs = {
     file: pkg.unpkg,
     format: `iife`,
   },
+  esm: {
+    file: pkg.browser,
+    format: `es`,
+  },
 };
 
 const allFormats = Object.keys(outputConfigs);

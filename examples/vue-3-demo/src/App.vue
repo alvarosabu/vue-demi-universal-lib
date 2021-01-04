@@ -1,6 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <awesome-input />
+  <awesome />
 </template>
 
 <script lang="ts">
